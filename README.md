@@ -1,5 +1,8 @@
 # Nuxt Minimal Starter
 
+--> Show issue with pages mounting twice when using useAsyncData()/useFetch() and layoutTransition
+
+
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup

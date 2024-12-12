@@ -21,6 +21,9 @@ const { data } = await useAsyncData(key, () => new Promise((resolve) =>
             <li>Switching between Page 1 and Page 5 --> is fine, because not using useAsyncData()</li>
             <li>Switching between Page 1 and Page 6 --> Nested components ofc get mounted twice too!</li>
             <li>Switching between Page 1 and Page 7 --> Same Problem using useFetch()</li>
+            <li>Switching between Page 1 and Page 8 --> Problem can be solved with wrapping Suspense</li>
+            <li>Switching between Page 1 and Page 9 --> Problem happens with any asynchronous method</li>
+            <li>Switching between Page 1 and Page 10 --> lazyloading inside Components still works with Suspense</li>
         </ul>
         <p>See console.log() for onMounted() log</p>
     </div>

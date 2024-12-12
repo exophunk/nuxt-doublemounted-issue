@@ -8,5 +8,8 @@
     <NuxtLink to="/page5">Page 5 </NuxtLink>
     <NuxtLink to="/page6">Page 6 </NuxtLink>
     <NuxtLink to="/page7">Page 7 </NuxtLink>
+    <NuxtLink to="/page8">Page 8 </NuxtLink>
+    <NuxtLink to="/page9">Page 9 </NuxtLink>
+    <NuxtLink to="/page10">Page 10 </NuxtLink>
   </div>
 </template>
