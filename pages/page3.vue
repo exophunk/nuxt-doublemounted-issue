@@ -5,19 +5,20 @@ definePageMeta({
 })
 
 onMounted(() => {
-  console.log('Page 3 mounted');
+    console.log('Page 3 mounted');
 });
 
-const key = `${Math.random()}`;
-const { data } = await useAsyncData(key, () => new Promise((resolve) =>
-    setTimeout(() => resolve(Math.random()), 1000)
-));
+const { data } = await useFetch('https://dummyjson.com/quotes/1?delay=500');
 </script>
 
 <template>
     <div>
-      <h1>Page 3</h1>
-      <p>different layout</p>
-      <div>data={{ data }}</div>
+        <h1>Page 3</h1>
+        <p>different layout</p>
+        <p>❌ Page mounted twice!</p>
+        <pre>
+            Data:
+            {{ data }}
+        </pre>
     </div>
-  </template>
+</template>

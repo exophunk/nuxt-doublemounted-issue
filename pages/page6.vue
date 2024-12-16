@@ -16,6 +16,7 @@ const { data } = await useAsyncData(key, () => 'simple');
     <div>
         <h1>Page 6</h1>
         <p>Subcomponent mounting twice too</p>
+        <p>❌ Page mounted twice!</p>
         <SubComponent />
     </div>
 </template>

@@ -4,7 +4,7 @@ onMounted(() => {
   console.log('Slow subcomponent mounted');
 });
 
-const { data, status } = await useFetch('https://dummyjson.com/products/1?delay=5000', { lazy: true });
+const { data, status } = await useFetch('https://dummyjson.com/quotes/1?delay=5000', { lazy: true });
 </script>
 
 <template>

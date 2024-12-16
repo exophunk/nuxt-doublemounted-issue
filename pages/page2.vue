@@ -4,17 +4,17 @@ onMounted(() => {
 });
 
 
-
-const key = `${Math.random()}`;
-const { data } = await useAsyncData(key, () => new Promise((resolve) =>
-    setTimeout(() => resolve(Math.random()), 500)
-));
+const { data } = await useFetch('https://dummyjson.com/quotes/1?delay=500');
 </script>
 
 <template>
     <div>
         <h1>Page 2</h1>
-        <p>Same layout</p>
-        <div>data={{ data }}</div>
+        <p>Same layout, everything ok</p>
+        <p>✅ No double mounting</p>
+        <pre>
+            Data:
+            {{ data }}
+        </pre>
     </div>
 </template>

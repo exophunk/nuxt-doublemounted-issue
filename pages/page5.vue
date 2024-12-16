@@ -8,10 +8,8 @@ onMounted(() => {
     console.log('Page 5 mounted');
 });
 
-function load() {
-    return new Promise((resolve) =>
-        setTimeout(() => resolve(Math.random()), 500)
-    )
+async function load() {
+    return $fetch('https://dummyjson.com/quotes/1?delay=500');
 }
 let data = ref();
 onMounted(async () => {
@@ -24,7 +22,11 @@ onMounted(async () => {
 <template>
     <div>
         <h1>Page 5</h1>
-        <p>without useAsyncData()</p>
-        <div>data={{ data }}</div>
+        <p>without async method (loading data in onMounted)</p>
+        <p>✅ No double mounting</p>
+        <pre>
+            Data:
+            {{ data }}
+        </pre>
     </div>
 </template>
